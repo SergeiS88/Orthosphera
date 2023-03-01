@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'DancingScript-Bold';
+    font-weight: bold;
+    src: local('DansingScript-Bold'),
+         url("/fonts/DancingScript-Bold.ttf") format('truetype'),
+         url("/fonts/DancingScript-Bold.ttf") format('woff');
+}
+
+@font-face {
+    font-family: 'Havana-Regular';
+    src: local('Havana-Regular'),
+        url("/fonts/ofont.ru_Havana.ttf") format('truetype'),
+        url("/fonts/ofont.ru_Havana.ttf") format('woff');
+}
