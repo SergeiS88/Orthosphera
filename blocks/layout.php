@@ -11,11 +11,10 @@
 </head>
 <body>
     <?php require "header.php"; ?>
-    <?php require "navigation.php"; ?>
     <?php require "main.php"; ?>
     <?php require "best_read.html"; ?>
     <?php require "best_music.php"; ?>
-    <?php require "pictures.php"; ?>
+    <?php require "articles.php"; ?>
     <?php require "myMail.php"; ?>
     <?php require "footer.php"; ?>
 </body>

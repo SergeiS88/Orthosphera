@@ -16,14 +16,12 @@
 ?>
 <!-- музыка -->
 <div class="best__music center">
-    <?php $i = 0;?>
     <?php foreach($music as $key => $musitem): ?>
-        <div class="music__item" onclick="AudioPlay(<?=$i?>)">
+        <div class="music__item" onclick="AudioPlay(<?=$key?>)">
+            <audio id="audio<?=$key?>" src="<?=$musitem['treck'];?>"></audio>
             <img class="mus__img" src="/img/grammo.svg" alt="пластинка">
-            <audio id="audio<?=$i?>" src="<?=$musitem['treck'];?>"></audio>
             <p class="music__label"><?=$musitem['label']?></p>
         </div>
-    <?php $i++;?>
     <?php endforeach; ?>
     <script src="/js/audiopleer.js"></script>
 </div>

@@ -1,5 +1,14 @@
 @import url("/css/promo.css");
 
+@keyframes rotate-center {
+    0% {
+              transform: rotate(0);
+    }
+    100% {
+              transform: rotate(360deg);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,8 +24,9 @@ a {
 
 body {
     font-family: 'Havana-Regular', cursive;
-    max-width: 1500px;
+    max-width: 1920px;
     margin: 0 auto;
+    box-shadow: 10px 25px 50px 5px rgba(10, 10, 10, 0.4);
     background: linear-gradient(to left top,#ffffff, #fcfdce);
 }
 
@@ -38,19 +48,30 @@ body {
     .header::before {
         position: absolute;
         content: url("/img/corner.svg");
-        top: -10px;
+        top: -10px; 
         right: 0;
         transform: rotate(180deg);
     }
     .header svg:hover {
-        fill: dodgerblue;
+        fill: #1e90ff;
         stroke: #1e90ff;
+}
+
+.header__left {
+    z-index: 1;
+}
+
+.header__right {
+    z-index: 1;
 }
 
 .name {
     font-family: 'DancingScript-Bold'; 
     font-weight: bold;
     font-size: 70px;
+}
+.name2 {
+    font-size: x-large;
 }
 
 /* ______________________________ \* навигация */
@@ -74,11 +95,6 @@ body {
 .menu a:hover {
     color: dodgerblue;
     border-color: #1e90ff;
-}
-
-/* __________________________________\* главная */
-.main {
-    position: relative;
 }
 
 
@@ -164,12 +180,11 @@ body {
 }
 
 .round .mus__img {
-    transition: transform 250s linear;
-    transform: rotate(5000deg);
+    animation: rotate-center 10s linear infinite both;
 }
 
-/*_____________________________________ \* картины */
-.pictures {
+/*_____________________________________ \* статьи */
+.articles {
     height: 500px;
     background: linear-gradient(to right top, #222, #444);
 }
@@ -241,7 +256,7 @@ body {
 .footer {
     padding-top: 30px;
     padding-bottom: 30px;
-    background: url("/img/gzhel_l-t.svg") top -10px left / 160px no-repeat,
+    background: url("/img/corner.svg") top -10px left / 220px no-repeat,
         url("/img/grass.svg") bottom  right -20px / 90px repeat-x,
         url("/img/grass-2.svg") bottom -2px right 16px/ 90px repeat-x,
         url("/img/grass-3.svg") bottom -2px right 23px / 90px repeat-x,
@@ -256,14 +271,14 @@ body {
 
 /*цвета*/
 .bright__lemon {color: #fcfdce;}
-.birusa {color: dodgerblue;}
+.dblue {color: dodgerblue;}
 
 .b__xerox{background-color: #333333;}
 
 /*позиционирование*/
 .center {
-    padding-left: calc(50% - 42%);
-    padding-right: calc(50% - 42%);
+    padding-left: calc(50% - 40%);
+    padding-right: calc(50% - 40%);
 }
 
 .flex{display: flex;}
@@ -278,6 +293,7 @@ body {
 .jc-e{justify-content: end;}
 
 .ai-c{align-items: center;}
+.ai-b{align-items: baseline;}
 
 .grid{display: grid;}
 

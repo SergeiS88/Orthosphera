@@ -1,4 +1,26 @@
-.promo__txt {
+.main {
+    position: relative;
+    height: 60vw;
+}
+
+/* _____________________________ \* слаидер */
+
+.arise {
+    transition: 1s;
+    opacity: 1 !important;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    opacity: 0;
+    background: linear-gradient(to right, #fcfdce, #ffffff);
+}
+
+div.slider__txt {
     position: absolute;
     max-width: 50%;
     bottom: 25%;
@@ -13,58 +35,39 @@
                 0 -1px 2px #fff;
 }
 
-.promo__img {
+.slider__img {
     width: 100%;
-    height: 100%;
     opacity: 0.4;
     
 }
 
-
-.slider__wrapper {
-    width: 100%;
-    height: 1050px;
-}
-
-.araise {
-    transition: 2s;
-    opacity: 1 !important;
-}
-
-.slide {
+.slider__nav {
     position: absolute;
     top: 0;
-    width: 100%;
     height: 100%;
-    opacity: 0;
-    background: linear-gradient(to right, #fcfdce, #ffffff);
-}
-
-.slider__nav {
-    height: 40px;
     width: 100%;
-    margin-top: 1.5em;
+    /* margin-top: 1.5em; */
 }
 
 .slider__nav button {
+    margin: 0 20px;
     border: none;
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 100%;
     cursor: pointer;
-    text-indent: -9999em;
-    background-color: transparent;
-    background-repeat: no-repeat;    
 }
 
-.slider__nav button.slider__previous {
+.slider__previous {
     float: left;
-    background: #282906;
+    background: url('/img/slider/previous.svg') center no-repeat;
+    z-index: 1;
 }
 
-.slider__nav button.slider__next {
+.slider__next {
     float: right;
-    background: #2a2b06;
+    background: url('/img/slider/next.svg') center no-repeat;
+    z-index: 1;
 }
 
 /* ______________________________ \* беседка */
@@ -127,5 +130,5 @@
     padding-bottom: 25px;
     font-size: 28px;
     background: linear-gradient(to right bottom, #fbfbc5, #fdfcf7);
-}
+} 
 
