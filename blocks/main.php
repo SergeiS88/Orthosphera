@@ -26,6 +26,7 @@
                 <?php $i = 0;?>
                 <?php foreach($slider as $key => $slide): ?>
                 <?php $i++;?> 
+    <!-- <script src="js/chat.js"></script> -->
                 <div class="slide slide__<?=$i?>">
                     <img class="slider__img" src="<?=$slide['image']?>" alt="<?=$slide['alt']?>">
                     <div class="slider__txt">
@@ -35,21 +36,12 @@
                 </div>
                 <?php endforeach; ?>
             </div>
+        </div>
             <div class="slider__nav">
                 <button type="button" class="slider__previous"></button>
                 <button type="button" class="slider__next"></button>
 	        </div>
-        </div>
-        <input class="chat__checkbox" type="checkbox" id="check__id">
-        <div class="chat__box center flex column jc-c ai-c gap__30">
-            <h2 class="chat__header">Беседка</h2>
-            <div>
-                <input class="chat__message" type="text" id="message" placeholder="Ваше слово" required>
-                <button class="chat__button" onclick="send()">Отправить</button>
-            </div>
-            <div class="chat__area" id="chat">вамсиыапоысмифорпаифрвмиывапаырum fuga voluptates odit rem? Quod eum nostrum modi commodi dolores. Officiis, amet? Lorem ipsum dolor sit amet consectetur adipisicing elit. M sint perferendis nesciunt laudantium, quas voluptatem reiciendis quia omnis facere saepe, reprehenderit libero tenetur ad. Eum, omnis! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus ipsum asperiores, autem et praesentium excepturi ex voluptatibus, assumenda cumque reiciendis mollitia quod error dolore velit aut voluptatum culpa veniam placeat.</div>
-        </div>
+        
         <script src="/js/slider.js"></script>
-    <!-- <script src="js/chat.js"></script> -->
 </main>
 

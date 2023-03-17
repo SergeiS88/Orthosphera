@@ -1,5 +1,9 @@
-<div class="articles">
-    <article class="article1"></article>
-    <article class="article2"></article>
-    <article class="article3"></article>
-</div>
+<section class="articles center">
+    <h2>header2</h2>
+    <article>
+        <img src="./img/avat.jpg" alt="статья {{ articlesId }}">
+        <h3>header3</h3>
+        <p>description</p>
+        <a href="#">link</a>
+    </article>    
+</section>

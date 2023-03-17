@@ -11,7 +11,7 @@ if (isset($_POST['message']) && !empty($_POST['message'])) {
     $statement->execute([$message]);
 
     $result = [
-        'status' => 'ok'
+        'status' => 'da'
     ];
     echo json_encode($result, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 

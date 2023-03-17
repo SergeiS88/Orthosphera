@@ -1,12 +1,6 @@
 <footer class="footer center b__xerox flex jc-sb">
     <div class="footer__left">
-        <svg fill="#fcfdce" viewBox="-2.5 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg"  stroke="#fcfdce" width="50px">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-                <path d="M11.902 14.114V4.337l1.108 1.108v9.777H2.652A1.664 1.664 0 0 1 .99 13.559V4.9a1.665 1.665 0 0 1 1.662-1.663h.664V7.25l.874-.645.875.645V3.236h5.729v9.77h-7.85a.978.978 0 0 0-.626.111.56.56 0 0 0-.006.88.613.613 0 0 0 .39.117h9.2z" fill="#1e90ff"></path>
-            </g>
-        </svg>
+        <svg fill="#1e90ff" width="64px" height="64px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#fcfdce"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>book</title> <path d="M15 25.875v-19.625c0 0-2.688-2.25-6.5-2.25s-6.5 2-6.5 2v19.875c0 0 2.688-1.938 6.5-1.938s6.5 1.938 6.5 1.938zM29 25.875v-19.625c0 0-2.688-2.25-6.5-2.25s-6.5 2-6.5 2v19.875c0 0 2.688-1.938 6.5-1.938s6.5 1.938 6.5 1.938zM31 8h-1v19h-12v1h-5v-1h-12v-19h-1v20h12v1h7.062l-0.062-1h12v-20z"></path> </g></svg>
     </div>
     <div class="footer__right flex gap__30">
         <a href="">

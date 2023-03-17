@@ -1,0 +1,259 @@
+@media (min-width: 1201px) and (max-width: 1600px) {
+    .main {
+        height: 900px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .main {
+        height: 700px;
+    }
+    div.slider__txt {
+        font-size: 16px;
+    }
+    .best__read__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .center {
+        padding-left: calc(50% - 46%);
+        padding-right: calc(50% - 46%);
+    }
+    .main {
+        height: 600px;
+    }
+    div.slider__txt {
+        font-size: 14px;
+        right: 70px;
+    }
+    .slider__nav button {
+        width: 35px;
+    }
+    
+    .header {
+        overflow: hidden;
+        border-bottom: none;
+    }
+    .header__before {
+        scale: 0.6;
+        top: -45px;
+        right: -45px;
+    }
+    .header__after {
+        scale: 0.8;
+        bottom: -25px;
+        left: -25px;
+    }
+    .name {
+        font-size: 35px;
+    }
+    .name2 {
+        font-size: 15px;
+    }
+    
+    .best__read__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .best__read__txt {
+        font-size: 12px;
+    }
+    .best__read__ancor {
+        font-size: 13px;
+    }
+    .best__read__item__heading {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .center {
+        padding-left: calc(50% - 47%);
+        padding-right: calc(50% - 47%);
+    }
+    .main {
+        height: 400px;
+    }
+    div.slider__txt {
+        font-size: 11px;
+        right: 65px;
+    }
+    .slider__nav button {
+        width: 35px;
+    }
+    
+    .header {
+        overflow: hidden;
+        border-bottom: none;
+    }
+    .header__before {
+        display: none;
+    }
+    .header__after {
+        scale: 0.5;
+        bottom: -55px;
+        left: -55px;
+    }
+    .name {
+        font-size: 25px;
+    }
+    .name2 {
+        font-size: 10px;
+    }
+    
+    .best__read__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .best__read__txt {
+        font-size: 10px;
+    }
+    .best__read__ancor {
+        font-size: 11px;
+    }
+    .best__read__item__heading {
+        font-size: 12px;
+    }
+    .best__read__item {
+        width: 70%;
+    }
+    .best__read img {
+        width: 50%;
+}
+}
+
+
+/* 00000000000000000000000000000000 \* трубки вертикально */
+
+
+@media (max-width: 480px) {
+    .center {
+        padding-left: calc(50% - 45%);
+        padding-right: calc(50% - 45%);
+    }
+    /* голова */
+    .header {
+        overflow: hidden;
+        border-bottom: none;
+    }
+    .header__before {
+        display: none;
+    }
+    .header__after {
+        scale: 0.3;
+        bottom: -70px;
+        left: -70px;
+    }
+    .name {
+        font-size: 30px;
+    }
+    .name2 {
+        display: none;
+    }
+    .chat__toggle {
+        width: 30px;
+    }
+    .mobile__menu__svg {
+        width: 30px;
+    }
+    /*слайдер*/
+    .main {
+        height: 300px;
+    }
+    div.slider__txt {
+        font-size: 10px;
+        font-weight: normal;
+        font-style: normal;
+        max-width: 90%;
+        right: 15px;
+        bottom: 2px;
+    }
+    .slider__nav button {
+        width: 30px;
+    }
+    /* книги */
+    .best__read {
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding: 15px 20px 10px;
+    }
+    .best__read__heading {
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+    .best__read__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .best__read__item {
+        flex-direction: row;
+    }
+    .best__read__item__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5px;
+    }
+    .best__read__item__heading {
+        font-size: 14px;
+    }
+    .best__read__txt {
+        font-size: 13px;
+    }
+    .best__read__ancor {
+        font-size: 11px;
+    }
+    .best__read::before {
+        content: "";
+    }
+    .best__read::after {
+        content: "";
+    }
+    .best__read img {
+        width: 40%;
+    }
+    /* медиа */
+    .best__media {
+        grid-template: 20px 110px 110px 1fr/repeat(3, 1fr);
+        gap: 20px;
+    }
+    .best__media__heading {
+        grid-column: 1/4;
+        font-size: 25px;
+    }
+    .music__label {
+        font-size: 8px;
+        bottom: 0;
+        right: 0;
+    }
+    .artist {
+        font-size: 9px;
+    }
+    .mus__img {
+        left: 0;
+        top: 0;
+        transform:  translate(0,0);
+        width: 90%;
+    }
+    /**/
+    .video__wrapper {
+        margin-top: 10px;
+        grid-column: 1/4;
+        grid-row: 4;
+    }
+    .video__title {
+        font-size: 5px;
+        top: 2px;
+    } 
+    .duration__box {
+        font-size: 7px;
+    }
+    .side {
+        display: none;
+    }
+}

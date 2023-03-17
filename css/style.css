@@ -1,11 +1,9 @@
-@import url("/css/promo.css");
-
 @keyframes rotate-center {
     0% {
-              transform: rotate(0);
+        transform: rotate(0);
     }
     100% {
-              transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -30,31 +28,34 @@ body {
     background: linear-gradient(to left top,#ffffff, #fcfdce);
 }
 
+.disp__none {display: none;}
+.vis__hidden{visibility: hidden;}
+
 /* _________________________________ \* голова */
 .header {
     position: relative;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    height: 12%;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-bottom: 4px dotted #444444;
     background:
         linear-gradient(to left, #444, #222);
 }
-    .header::after {
-        position: absolute;
-        content: url("/img/corner.svg");
-        bottom: -30px;
-        left: 0;
-    }
-    .header::before {
-        position: absolute;
-        content: url("/img/corner.svg");
-        top: -10px; 
-        right: 0;
-        transform: rotate(180deg);
-    }
     .header svg:hover {
         fill: #1e90ff;
         stroke: #1e90ff;
+}
+.header__after {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
+.header__before {
+    position: absolute;
+    top: -30px;
+    right: -10px; 
+    rotate: 180deg;
+    scale: 0.8;
 }
 
 .header__left {
@@ -66,20 +67,39 @@ body {
 }
 
 .name {
+    cursor: pointer;
     font-family: 'DancingScript-Bold'; 
     font-weight: bold;
-    font-size: 70px;
+    font-size: 50px;
 }
 .name2 {
-    font-size: x-large;
+    font-size: 25px;
 }
 
-/* ______________________________ \* навигация */
+/* ___________________________  \* навигация */
+.mobile__menu {
+    position: absolute;
+    padding: 20px 20px;
+    right: 0;
+    height: 1000px;
+    gap: 20px;
+    width: 100%;
+    background: linear-gradient(to top right, rgba(245, 244, 187, 0.9), #fcfde7);
+    z-index: 2;
+}
+.mobile__menu__ancor {
+    color: #000;
+    cursor: pointer;
+}
+.mobile__menu__ancor:hover {
+    color: dodgerblue;
+    border-color: #1e90ff;
+}
+
 .menu {
     padding-top: 10px;
     background: url("/img/nav-2.svg") left top/90px repeat-x;
 }
-
 
 .menu__ancor {
     color: #000;
@@ -87,16 +107,150 @@ body {
     font-size: 23px;
     width: auto;
     border: 1px ridge #333333;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom: none;
+    border-radius: 15px;
+    z-index: 1;
 }
 
-.menu a:hover {
+.menu a:hover,
+.menu p:hover {
     color: dodgerblue;
     border-color: #1e90ff;
+    background: linear-gradient(to top right, #333, #666);
 }
 
+/* ______________________________ \* беседка */
+
+.chat__box {
+    position: absolute;
+    top: 12%;
+    right: 0;
+    height: 90%;
+    background: url("/img/chat.png") center/cover no-repeat,
+    linear-gradient(to right bottom, #fcfdce, #FFF);
+    z-index: 1;
+}
+
+.chat__header {
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
+    font-style: italic;
+    color: crimson;
+    text-shadow: 2px 2px 1px rgb(0, 0, 0);
+}
+
+.chat__message { 
+    margin-right: -10px;
+    font-size: 24px;
+    padding: 25px;
+    background: linear-gradient(to right top, #fcfdce, #fcfcf4);
+    border: none;
+    border-radius: 25px 0 0 25px;
+}
+
+.chat__button {
+    font-size: 24px;
+    padding: 25px;
+    color: #fcfdce;
+    background-color: #444;
+    border: none;
+    border-radius: 0 25px 25px 0;
+}
+
+.chat__button:active {
+    box-shadow: inset 0 0 0 1px #fcfdce;
+    transform: scale(0.99);
+}
+
+.chat__area {
+    margin-bottom: 50px;
+    opacity: 0.7;
+    height: 50%;
+    width: 66%;
+    overflow: hidden;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 28px;
+    background: linear-gradient(to right bottom, #fbfbc5, #fdfcf7);
+} 
+
+
+/* _____________________________ \* слаидер */
+.main {
+    position: relative;
+    height: 1100px;
+    overflow: hidden;
+}
+
+.arise {
+    transition: 1s;
+    opacity: 1 !important;
+}
+
+.slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 88%;
+    /* height: 100%; */
+    transition: 1s;
+    opacity: 0;
+    background: linear-gradient(to right, #fcfdce, #ffffff);
+}
+
+div.slider__txt {
+    position: absolute;
+    max-width: 50%;
+    bottom: 25%;
+    right: 100px;
+    text-align: right;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: x-large;
+    text-shadow: 1px 0 2px #fff, 
+                0 1px 2px #fff, 
+                -1px 0 2px #fff, 
+                0 -1px 2px #fff;
+}
+
+.slider__img {
+    width: 100%;
+    opacity: 0.4;
+    
+}
+
+.slider__nav {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /* margin-top: 1.5em; */
+}
+
+.slider__nav button {
+    border: none;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.slider__nav button:hover {
+    background-color: rgba(255, 241, 160, 0.1);
+    filter: brightness(0);
+}
+
+.slider__previous {
+    float: left;
+    background: url('/img/slider/previous.svg') left no-repeat;
+    z-index: 1;
+}
+
+.slider__next {
+    float: right;
+    background: url('/img/slider/next.svg') right no-repeat;
+    z-index: 1;
+}
 
 /* ____________________________________ \* лучшее почитать */
 .best__read { 
@@ -104,91 +258,253 @@ body {
     padding-top: 80px;
     padding-bottom: 80px;
     color: #fcfdce;
-    background: linear-gradient(to left top,    #444444, #222222);
+    background: linear-gradient(to right top, rgba(0, 0, 0, 0.9), rgba(100, 100, 100, 0.8)),
+    url("/img/books/dawn.jpeg") left/cover;
 }
     .best__read::after {
-        content: url('/img/gzhel_l-t.svg');
+        content: url('/img/corner.svg');
         position: absolute;
-        top: -25px;
-        left: -25px;
+        top: 70px;
+        left: 70px;
+        rotate: 90deg;
+        scale: 2;
     }
     .best__read::before {
-        content: url('/img/gzhel_l-t.svg');
+        content: url('/img/corner.svg');
         position: absolute;
-        bottom: -25px;
-        right: -15px;
-        rotate: 180deg;
+        bottom: 70px;
+        right: 95px;
+        rotate: 270deg;
+        scale: 2;
     }
     .best__read img {
-        width: 200px;
+        width: 80%;
         filter: grayscale(70%);
 }
 
 
 .best__read__item {
+    font-family: 'Times New Roman', Times, serif;
+    width: 360px;
+    padding: 20px;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+    transition: .3s;
     z-index: 1;
+    box-shadow: 5px 5px 20px  rgba(10, 5, 5, 0.3);
+    /* border-top: 1px solid #222;
+    border-left: 1px solid #222; */
+}
+    /* .best__read__item:hover {
+        box-shadow: 5px 5px 20px  rgba(10, 5, 5, 0.3);
+        transform: scale(101%);
+} */
+    .best__read__item p:hover,
+    .best__read__item h3:hover,
+    .best__read__item a:hover {
+        color: dodgerblue;
+    }
+
+.best__read__heading {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #1e90ff;
 }
 
-.best__read__item:hover {
-    color: dodgerblue;
+.best__read__ancor {
+    padding: 5px 25px;
+    font-size: 20px;
+    color: #fcfdce;
+    border-radius: 25px;
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0.3), rgba(229, 250, 136, 0.3));
 }
 
 /* ____________________________________ \* лучшее послушать */
 
-.best__music {
+.best__media {
     padding-top: 30px;
     padding-bottom: 30px;
     display: grid;
-    grid-template: repeat(2, 1fr)/repeat(3, 1fr);
-    gap: 50px;
+    grid-template: 20px 1fr 1fr/repeat(4, 1fr);
+    gap: 40px;
     background: linear-gradient(to top right, rgba(245, 244, 187, 0.3), #fcfde7),
         url("/img/notes.png") center/cover no-repeat;
 }
-    /* .best__music>:nth-last-child(1){
-        grid-column: 1/3;
-        grid-row: 2/4;
-} */
+
+.best__media__heading {
+    grid-column: 1/5;
+    grid-row: 1;
+    font-size: 40px;
+    text-align: center;
+    color: dodgerblue;
+}
+
 
 .music__item {
     position: relative;
 }
 
+
 .music__label {
-        position: absolute;
-        bottom: 50px;
-        right: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 25px;
-        text-align: right;
-        color: #1e90ff;
-        text-shadow: 1px 0 2px #94c9ff, 
-                    0 1px 2px #94c9ff, 
-                    -1px 0 2px #94c9ff, 
-                    0 -1px 2px #94c9ff;
+    position: absolute;
+    bottom: 10%;
+    right: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    text-align: right;
+    color: #1e90ff;
+    text-shadow: 1px 0 2px #94c9ff, 
+    0 1px 2px #94c9ff, 
+    -1px 0 2px #94c9ff, 
+    0 -1px 2px #94c9ff;
+}
+
+.artist {
+    font-size: xx-large;
 }
 
 .mus__img {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%,0);
     width: 80%;
-    transition: .2s;
-}
-.mus__img:hover {
-    transform: scale(1.05);
 }
 
 .round .mus__img {
     animation: rotate-center 10s linear infinite both;
 }
 
-/*_____________________________________ \* статьи */
-.articles {
-    height: 500px;
-    background: linear-gradient(to right top, #222, #444);
+
+/*_____________________________________ \* видео */
+.video__wrapper {
+    background-color: #111;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    grid-column: 1/3;
+    grid-row: 3;
+    border: 1px solid #222;
+    box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.7);
 }
 
+
+.video__title {
+    font-size: 33px;
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    transform: translate(-50%,0);
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.controls {
+    position: absolute;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to top, #333, #aaa);
+    opacity: 0.9;
+    transition: bottom .3s linear;
+}
+
+.hide__hud {
+    bottom: -10%;
+}
+
+.buttons {
+    position: absolute;
+    width: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+}
+
+.play,
+.pause {
+    width: 100%;
+    height: 100%;
+}
+
+.buttons__box {
+    height: 100%;
+}
+
+.buttons__box img {
+    height: 100%;
+}
+
+.volume__input {
+    width: 10%;
+} 
+
+.time__input {
+    width: 50%;
+}
+
+.duration__box {
+    font-family: 'Times New Roman', Times, serif;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.full__screen {
+    height: 100%;
+}
+
+.side {
+    width: 1%;
+    height: 100%;
+    box-shadow: 3px 0px 3px #333,
+                -3px 0px 3px #333;
+}
+
+input[type=range]  {
+    appearance: none;
+    outline: none;
+    overflow: hidden;
+    height: 20%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 100%;
+    cursor: pointer;
+    background-color: #999;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #ddd;
+    cursor: pointer;
+    width:15px;
+    height: 100%;
+    box-shadow: -1000px  0 0 1000px  #444;
+}
+
+/* ___________________________________________\* статьи */
+.articles {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: linear-gradient(to right top, rgba(0, 0, 0, 0.9), rgba(100, 100, 100, 0.8)),
+    url("/img/videoplayer/dawn.png") center/cover;
+}
 
 /*_____________________________________ написать нам */
 .contact {
@@ -200,13 +516,13 @@ body {
 }
 
 .contact__left {
-    
+    margin-left: 50px;
     max-width: 450px;
     text-align: center;
 }
 .contact__ava {
     filter: grayscale(75%);
-    border-radius: 50%;
+    border-radius: 100px;
 }
 
 .contact__txt {
@@ -215,8 +531,7 @@ body {
 }
 
 .contact__right {
-    gap: 10px;
-    z-index: 1;
+    width: 100%;
 }
 
 .contact__form input:hover,
@@ -227,20 +542,16 @@ body {
 
 .input__email {
     padding: 8px;
-    width: 80%;
+    width: 100px;
     height: auto;
     border: none;
     border-radius: 10px 10px 0 0;
 }
-
 .input__txt {
     padding: 8px;
-    width: 80%;
     border: none;
 }
-
 .input__submit {
-    width: 80%;
     padding: 8px;
     height: auto;
     border: none;
@@ -277,8 +588,8 @@ body {
 
 /*позиционирование*/
 .center {
-    padding-left: calc(50% - 40%);
-    padding-right: calc(50% - 40%);
+    padding-left: calc(50% - 43%);
+    padding-right: calc(50% - 43%);
 }
 
 .flex{display: flex;}
@@ -290,11 +601,15 @@ body {
 
 .jc-c{justify-content: center;}
 .jc-sb{justify-content: space-between;}
+.jc-sa{justify-content: space-around;}
 .jc-e{justify-content: end;}
 
+.ai-s{align-items: start;}
 .ai-c{align-items: center;}
 .ai-b{align-items: baseline;}
+.ai-e{align-items: end;}
 
 .grid{display: grid;}
 
 .ji-c{justify-items: center;}
+
