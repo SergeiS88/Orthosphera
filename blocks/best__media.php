@@ -1,5 +1,5 @@
 <!-- музыка -->
-<div class="best__media center">
+<section class="best__media center">
     <h2 class="best__media__heading">Лучшее послушать</h2>
     <div class="video__wrapper">
         <span class="video__title">петь великий мастерище.</span>
@@ -24,6 +24,6 @@
             <img class="play" src="./img/videoplayer/play.svg" width="150px" alt="play">
             <img class="pause disp__none" src="./img/videoplayer/pause.svg" width="150px" alt="pause">
         </div>
-        </div>
-    
-</div>
+    </div>
+</section>
+

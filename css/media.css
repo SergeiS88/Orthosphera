@@ -4,6 +4,9 @@
     }
 }
 
+/* 00000000000000000000000000000000 \* мелкие ноуты и планшеты боком */
+
+
 @media (min-width: 992px) and (max-width: 1200px) {
     .main {
         height: 700px;
@@ -15,7 +18,20 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+    .itc-slider__item {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    /*почта*/
+    .contact__txt {
+        margin-top: 12px;
+        font-size: 20px;
+    }
 }
+
+
+/* 00000000000000000000000000000000 \* планшет стоя и тел боком */
+
 
 @media (min-width: 768px) and (max-width: 991px) {
     .center {
@@ -67,7 +83,26 @@
     .best__read__item__heading {
         font-size: 15px;
     }
+    /*блог*/
+    .itc-slider__item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    /*почта*/
+    .contact {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .contact__txt {
+        font-size: 18px;
+    }
 }
+
+
+/* 00000000000000000000000000000000 \* средняя трубка */
+
 
 @media (min-width: 481px) and (max-width: 767px) {
     .center {
@@ -122,11 +157,25 @@
     }
     .best__read img {
         width: 50%;
-}
+    }
+    .itc-slider__item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    /*почта*/
+    .contact {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .contact__txt {
+        font-size: 18px;
+    }
 }
 
 
-/* 00000000000000000000000000000000 \* трубки вертикально */
+/* 00000000000000000000000000000000 \* мелкие трубки вертикально */
 
 
 @media (max-width: 480px) {
@@ -255,5 +304,24 @@
     }
     .side {
         display: none;
+    }
+    /*блог*/
+    .itc-slider__item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    /*почта*/
+      .contact {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .contact__header {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .contact__txt {
+        font-size: 14px;
     }
 }

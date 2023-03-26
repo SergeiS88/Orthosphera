@@ -3,19 +3,9 @@
         <img class="header__before" src="./img/corner.svg" alt="плющ">
         <img class="header__after" src="./img/corner.svg" alt="плющ">
         <div class="header__left flex ai-b gap__30">
-            <a class="name dblue" href="./">Orthosphera</a><span class="name2">Территория <strong>культуры</strong></span>
+            <a class="name dblue" href="./">Orthosphera</a><span class="name2">ковчег <strong>культуры</strong></span>
         </div>
         <div class="header__right flex gap__30 ai-s">
-
-            <!-- пиктограмма поиска -->
-            <svg class="search" width="55px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#fcfdce">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier"> 
-                    <path d="M15 15L21 21" stroke="#fcfdce" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
-                    <path d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#fcfdce" stroke-width="2"></path> 
-                </g>
-            </svg>
 
             <!-- пиктограмма чата -->
             <svg class="chat__toggle" fill="#fcfdce" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve" stroke="#1e90ff">
@@ -69,14 +59,14 @@
     <nav class="mobile__menu disp__none vis__hidden flex column ai-e">
         <p class="mobile__menu__ancor" >Кабинет</p>
         <a class="mobile__menu__ancor" href="#">Читальный Зал</a>
-        <a class="mobile__menu__ancor" href="#">Книжный Ряд</a>
+        <a class="mobile__menu__ancor" href="#">Статьи</a>
         <a class="mobile__menu__ancor" href="#">Музыка</a>
         <a class="mobile__menu__ancor" href="#">Гостевой Альбом</a>
     </nav>
     <!-- навигация -->
     <nav class="menu center flex  jc-e">
         <a class="menu__ancor" href="#">Читальный Зал</a>
-        <a class="menu__ancor" href="#">Книжный Ряд</a>
+        <a class="menu__ancor" href="#">Статьи</a>
         <a class="menu__ancor" href="#">Музыка</a>
         <a class="menu__ancor" href="#">Гостевой Альбом</a>
         <p class="menu__ancor" >Кабинет</p>
